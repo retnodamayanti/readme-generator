@@ -60,21 +60,9 @@ const questions = [
         message: 'What is your email address?',
       },
 ];
-// What is your project's title?
-// Please write a short description of your project:
-// What does the user need to know about the installation for your project?
-// What does the user need to know about using the repo?
-// What does the user need to know about contributing to the repo?
-// What does the user need to know about testing protocol for your project?
-// Please select the license you used for this project
-// What is your GitHub username?
-// What is your email address?
-// What command should be run to install dependencies? node 
-// What command should be run to run test? node index.js
 
 
-// array of questions
-// 
+
 const generateReadme = (data) =>
 `# ${data.title} ![]()
 
@@ -112,8 +100,8 @@ ${data.contributing}
 ${data.tests}
 
 ## Questions
-- Github username: ${data.username}
-- Github email: ${data.email}
+- Github Profile: https://github.com/${data.username}
+If you have additional questions, kindly contact me via email at ${data.email}.
  
 ## Credit
 - [Bootcamp GitLab 09-NodeJS](https://git.bootcampcontent.com/University-of-Adelaide/UADEL-VIRT-FSF-PT-03-2023-U-LOLC/-/tree/main/09-NodeJS) 
