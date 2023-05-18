@@ -22,8 +22,10 @@ Please visit the video demonstrating the application [here](https://drive.google
 
 ## Usage 
 1. Screenshot below shows the command-line application
-2. Screenshot below shows how to initialize the project
-3. Screenshot below shows the README.md file
+![command_line_app](./images/command-line-app.png)
+
+2. Screenshot below shows the generated README.md file
+![generated_readme](./images/generated_readme.png)
 
 
 ## Contributing
