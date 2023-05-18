@@ -3,16 +3,16 @@
 ## Description
 
 This application was built using command-line application using Node.js that generates a README.md file based on the user input. It will help user to quickly create a README.md file with all the necessary information and sections for a project.
-Please visit the application here: [Readme Generator - Node.Js](https://retnodamayanti.github.io/readme-generator/)
+Please visit the video demonstrating the application [here](https://drive.google.com/file/d/1y9fLhrap601nVIFwm3iBumoo_H4Fkb9S/view?usp=sharing).
 
 ## Table of Contents
 - [Installation](#installation)
-- [License](#license)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [Tests](#tests)
 - [Questions](#questions)
 - [Credit](#credit)
+- [License](#license)
 
 ## Installation
 - Clone the repo
