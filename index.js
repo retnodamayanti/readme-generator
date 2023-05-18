@@ -69,8 +69,7 @@ const generateReadme = (data) => {
 
 ## Description
 
-${data.description}. 
-Please visit the application here: [${data.title}](https://retnodamayanti.github.io/readme-generator/)
+${data.description}
 
 ## Table of Contents
 - [Installation](#installation)
