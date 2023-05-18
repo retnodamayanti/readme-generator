@@ -45,8 +45,8 @@ const questions = [
         message: 'Please select the license of your project.',
         choices: [
             'MIT',
-            'Apache',
-            'GPL',
+            'Apache 2.0',
+            'GPL 3.0',
         ]
       },
       {
@@ -61,9 +61,8 @@ const questions = [
       },
 ];
 
-
-
 const generateReadme = (data) =>
+
 `# ${data.title} ![]()
 
 ## Description
@@ -82,10 +81,9 @@ Please visit the application here: [${data.title}](https://retnodamayanti.github
 
 ## Installation
 - Clone the repo
-- Initialize Node.js project: run `npm init -y`
-- Install the dependencies: run `${data.runinstallation}`
-- Please run `${data.runtest}` to test the application.
-
+- Initialize Node.js project: run \`npm init -y\`,
+- Install the dependencies: run \`${data.runinstallation}\`
+- Please run \`${data.runtest}\` to test the application
 
 ## License
 ${data.license}
@@ -100,8 +98,7 @@ ${data.contributing}
 ${data.tests}
 
 ## Questions
-- Github Profile: https://github.com/${data.username}
-If you have additional questions, kindly contact me via email at ${data.email}.
+Please visit my Github Profile [here](https://github.com/${data.username}). If you have additional questions, kindly contact me via email at ${data.email}.
  
 ## Credit
 - [Bootcamp GitLab 09-NodeJS](https://git.bootcampcontent.com/University-of-Adelaide/UADEL-VIRT-FSF-PT-03-2023-U-LOLC/-/tree/main/09-NodeJS) 
@@ -110,14 +107,26 @@ If you have additional questions, kindly contact me via email at ${data.email}.
 `;
 
 
+
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, (err) =>
-    err ? console.log(err) : console.log('Successfully created README.md!'))
-}
+// function writeToFile(fileName, data) {
+//     fs.writeFile(fileName, data, (err) =>
+//     err ? console.log(err) : console.log('Successfully created README.md!'))
+// }
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+inquirer
+  .prompt(questions)
+  .then((answers) => {
+    
+    const readmeContent = generateReadme(answers);
+
+    fs.writeFile('generated/README.md', readmeContent, (err) =>
+      err ? console.log(err) : console.log('Successfully created README.md!')
+    );
+  });
+}
 
 // Function call to initialize app
 init();
