@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const { generateMarkdown, renderLicenseBadge } = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -61,9 +62,10 @@ const questions = [
       },
 ];
 
-const generateReadme = (data) =>
+const generateReadme = (data) => {
+    const licenseBadge = renderLicenseBadge(data.license);
 
-`# ${data.title} ![]()
+    return `# ${data.title} ${licenseBadge}
 
 ## Description
 
@@ -105,14 +107,7 @@ Please visit my Github Profile [here](https://github.com/${data.username}). If y
 - Assistance from TA and Tutor
 - [Inquirer.js/packages/inquirer/examples/list.js](https://github.com/SBoudrias/Inquirer.js/blob/master/packages/inquirer/examples/list.js)
 `;
-
-
-
-// TODO: Create a function to write README file
-// function writeToFile(fileName, data) {
-//     fs.writeFile(fileName, data, (err) =>
-//     err ? console.log(err) : console.log('Successfully created README.md!'))
-// }
+}
 
 // TODO: Create a function to initialize app
 function init() {

@@ -32,9 +32,10 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license) {
-    return `## License
-    [${license}](${renderLicenseLink(license)})
-    ${renderLicenseBadge(license)}`;
+    return `
+## License
+
+[${license}](${renderLicenseLink(license)}) ${renderLicenseBadge(license)}`;
   }
   return '';
 }
@@ -46,4 +47,4 @@ ${renderLicenseSection(data.license)}
 `;
 }
 
-module.exports = generateMarkdown;
+module.exports = { generateMarkdown, renderLicenseBadge };
