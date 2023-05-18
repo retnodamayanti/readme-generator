@@ -1,9 +1,9 @@
-# Readme Generator - Node.Js 
+# Readme Generator - Node.js 
 
 ## Description
 
 This application was built using command-line application using Node.js that generates a README.md file based on the user input. It will help user to quickly create a README.md file with all the necessary information and sections for a project.
-Please visit the video demonstrating the application [here](https://drive.google.com/file/d/1y9fLhrap601nVIFwm3iBumoo_H4Fkb9S/view?usp=sharing).
+Please visit a video demonstrating the application [here](https://drive.google.com/file/d/1y9fLhrap601nVIFwm3iBumoo_H4Fkb9S/view?usp=sharing).
 
 ## Table of Contents
 - [Installation](#installation)
@@ -16,7 +16,7 @@ Please visit the video demonstrating the application [here](https://drive.google
 
 ## Installation
 - Clone the repo
-- Initialize Node.js project: run `npm init -y`,
+- Initialize Node.js project: run `npm init -y`
 - Install the dependencies: run `npm i inquirer@8.2.4`
 - Please run `node index.js` to test the application
 
